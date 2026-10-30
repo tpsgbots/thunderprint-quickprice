@@ -1,4 +1,4 @@
-/* ThunderPrintSG quick-price prefill (OPS site-wide Custom JS).
+/* ThunderPrintSG quick-price prefill (OPS site-wide Custom JS). INSTALLED 2026-10-31 02:2x SGT (Custom JS v=1793384926); before/after copies in ops-backup/ (local only).
    Does nothing unless the URL has ?tpq={...} (links from the Quick Price page).
    tpq = JSON {fieldName: value}; a value starting with "~" picks the <select> option whose text starts with it.
    Fields are set one at a time (the OPS calculator re-renders after each change), then a 2nd pass fixes anything a

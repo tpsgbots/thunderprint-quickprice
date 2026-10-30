@@ -182,7 +182,7 @@ function quote() {
   $('stale').innerHTML = ok ? '' : `We're re-checking this product's prices right now. Please see the live price on our <a href="${d.url}" target="_blank" rel="noopener">webstore</a> or WhatsApp us.`;
   $('total').textContent = total === null || !ok ? 'S$–' : 'S$' + total;
   $('what').textContent = total === null || !ok ? '' : 'total, nett';
-  $('lead').innerHTML = `Ready in <b>${sp.days.toLowerCase()}</b>${pr.days ? ' <b>+ 1 working day</b> for the proof' : ''} <i>(printing time; choose delivery or self-collection at checkout)</i>`;
+  $('lead').innerHTML = (/^next/i.test(sp.days) ? `Ready ${pr.days ? 'in <b>2 working days</b> (incl. 1 day for the proof)' : '<b>next working day</b>'}` : `Ready in <b>${sp.days.toLowerCase()}</b>${pr.days ? ' <b>+ 1 working day</b> for the proof' : ''}`) + ` <i>(printing time; choose delivery or self-collection at checkout)</i>`;
   const u = new URL(d.url);
   u.searchParams.set('tpq', JSON.stringify(fields));
   u.searchParams.set('utm_source', 'quickprice'); u.searchParams.set('utm_medium', 'referral'); u.searchParams.set('utm_campaign', 'quickprice_pilot');
