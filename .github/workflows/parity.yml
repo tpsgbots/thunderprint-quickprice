@@ -1,0 +1,26 @@
+name: parity
+# Daily: compare the page's prices with the live thunderprint.sg calculator. A mismatch marks the product stale
+# in site/data/status.json (the page then hides its price) and turns this run red.
+on:
+  schedule: [{cron: '0 18 * * *'}]   # 02:00 SGT
+  workflow_dispatch:
+permissions: {contents: write, pages: write, id-token: write, actions: write}
+jobs:
+  parity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install beautifulsoup4
+      - id: p
+        run: python parity.py 20
+        continue-on-error: true
+      - name: commit status
+        run: |
+          git config user.name tpsgbots; git config user.email thunderprintsg@gmail.com
+          git add site/data/status.json
+          git diff --cached --quiet || { git commit -m "parity $(date -u +%F)"; git push; gh workflow run deploy; }
+        env: {GH_TOKEN: '${{ github.token }}'}
+      - if: steps.p.outcome == 'failure'
+        run: exit 1

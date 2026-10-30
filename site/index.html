@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Quick Price | ThunderPrintSG</title>
+<meta name="description" content="Instant prices for ThunderPrintSG stickers and namecards. Same prices as our webstore checkout.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--cyan:#00aeef;--navy:#111841;--grey:#626669;--line:#e3e6ea;--bg:#f6f8fa;--card:#fff;--ok:#0a7d38}
+*{box-sizing:border-box}
+body{margin:0;font-family:Montserrat,system-ui,sans-serif;font-weight:500;color:var(--navy);background:var(--bg);-webkit-font-smoothing:antialiased}
+header{background:var(--navy);color:#fff;padding:14px 16px}
+header .row{max-width:640px;margin:0 auto;display:flex;align-items:center;gap:12px}
+header img{height:30px;width:auto;background:#fff;border-radius:6px;padding:3px 6px}
+header h1{font-size:17px;margin:0;font-weight:700;letter-spacing:.2px}
+header p{margin:2px 0 0;font-size:12px;opacity:.8}
+main{max-width:640px;margin:0 auto;padding:14px 16px 190px}
+.tabs{display:flex;gap:8px;margin-bottom:14px}
+.tab{flex:1;border:2px solid var(--line);background:#fff;border-radius:12px;padding:11px 8px;font:600 14px Montserrat,sans-serif;color:var(--navy);cursor:pointer}
+.tab[aria-selected=true]{border-color:var(--cyan);background:#e8f8fe}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:12px}
+.card h2{font-size:13px;text-transform:uppercase;letter-spacing:.6px;color:var(--grey);margin:0 0 10px;font-weight:600}
+label.f{display:block;font-size:13px;color:var(--grey);margin:0 0 6px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+input[type=number],select{width:100%;font:600 16px Montserrat,sans-serif;color:var(--navy);border:1.5px solid var(--line);border-radius:10px;padding:11px 12px;background:#fff;appearance:none}
+select{background-image:linear-gradient(45deg,transparent 50%,var(--grey) 50%),linear-gradient(135deg,var(--grey) 50%,transparent 50%);background-position:calc(100% - 18px) 50%,calc(100% - 13px) 50%;background-size:5px 5px;background-repeat:no-repeat;padding-right:32px}
+input:focus,select:focus{outline:none;border-color:var(--cyan)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chip{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:6px 11px;font:600 13px Montserrat,sans-serif;color:var(--navy);cursor:pointer}
+.chip.on{border-color:var(--cyan);background:#e8f8fe}
+.opts{display:grid;gap:8px}
+.opt{display:flex;align-items:center;gap:10px;border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;cursor:pointer;font-size:14px}
+.opt input{accent-color:var(--cyan);width:18px;height:18px;margin:0}
+.opt .r{margin-left:auto;color:var(--grey);font-size:13px;white-space:nowrap}
+.opt:has(input:checked){border-color:var(--cyan);background:#f0fbff}
+.row3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.hint{font-size:12px;color:var(--grey);margin:6px 0 0}
+.err{color:#b42318;font-size:13px;margin-top:6px}
+.bar{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(17,24,65,.08);padding:12px 16px calc(12px + env(safe-area-inset-bottom))}
+.bar .in{max-width:640px;margin:0 auto}
+.price{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.price b{font-size:32px;font-weight:700;letter-spacing:-.5px}
+.price span{font-size:13px;color:var(--grey)}
+.lead{font-size:13px;margin:2px 0 10px;color:var(--navy)}
+.lead i{font-style:normal;color:var(--grey)}
+.ctas{display:grid;grid-template-columns:1.4fr 1fr;gap:8px}
+.btn{display:flex;align-items:center;justify-content:center;gap:6px;text-decoration:none;border-radius:12px;padding:13px 10px;font:700 15px Montserrat,sans-serif;text-align:center}
+.btn.p{background:var(--cyan);color:#fff}
+.btn.s{background:#fff;color:var(--navy);border:2px solid var(--navy)}
+.btn[aria-disabled=true]{opacity:.4;pointer-events:none}
+.stale{background:#fff7e6;border:1px solid #f5c26b;border-radius:12px;padding:12px;font-size:14px;margin-bottom:12px}
+footer{font-size:12px;color:var(--grey);text-align:center;margin-top:8px;line-height:1.6}
+footer a{color:var(--grey)}
+@media (min-width:600px){.bar{position:sticky;bottom:0;border-radius:14px 14px 0 0}}
+</style>
+</head>
+<body>
+<header><div class="row">
+  <img src="https://degqkf7c4iqz7.cloudfront.net/thunderpr/images/websitelogos/retailer_site_logo950.png" alt="ThunderPrintSG">
+  <div><h1>Quick Price</h1><p>Same prices as our webstore checkout. No minimum order.</p></div>
+</div></header>
+
+<main>
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" data-p="waterproof-stickers" aria-selected="true">Waterproof Stickers</button>
+    <button class="tab" role="tab" data-p="standard-namecards" aria-selected="false">Namecards</button>
+  </div>
+  <div id="stale" class="stale" hidden></div>
+  <form id="f" onsubmit="return false"></form>
+  <footer id="foot"></footer>
+</main>
+
+<div class="bar"><div class="in">
+  <div class="price"><b id="total">S$–</b><span id="what"></span></div>
+  <div class="lead" id="lead"></div>
+  <div class="ctas">
+    <a class="btn p" id="order" href="#" target="_blank" rel="noopener">Order on webstore</a>
+    <a class="btn s" id="wa" href="#" target="_blank" rel="noopener">WhatsApp us</a>
+  </div>
+</div></div>
+
+<script>
+const WA = '6597394986';
+const D = {}; let STATUS = {}; let cur = 'waterproof-stickers';
+const $ = id => document.getElementById(id);
+const tier = (v, T) => T.find(t => t >= v);
+const add = (list, id) => (list.find(x => x.id === id) || {add: 0}).add;
+const designsAdd = (d, T) => { const r = T.find(([upto]) => d <= upto); return r ? r[1] : null; };
+
+const STK = {L: 50, W: 50, q: 100, shape: 'Custom', material: 'Waterproof Matte', designs: 1, speed: 'std', proof: 'none'};
+const NC = {size: 0, mi: null, si: null, corners: false, q: 100, designs: 1, speed: 'std', proof: 'none'};
+
+function radios(name, list, val, extra) {
+  return '<div class="opts">' + list.map(x => `<label class="opt"><input type="radio" name="${name}" value="${x.id}" ${x.id === val ? 'checked' : ''}>${x.label}${extra ? extra(x) : ''}<span class="r">${x.add ? '+S$' + x.add : (x.id === 'digital' ? 'Free' : '')}</span></label>`).join('') + '</div>';
+}
+function chips(name, vals, fmt) { return '<div class="chips">' + vals.map(v => `<button type="button" class="chip" data-chip="${name}" data-v="${v}">${fmt ? fmt(v) : v}</button>`).join('') + '</div>'; }
+const speedTxt = x => ` <span style="color:var(--grey);font-size:13px">&nbsp;${x.days}</span>`;
+
+function renderStickers() {
+  const d = D[cur];
+  $('f').innerHTML = `
+  <div class="card"><h2>Size</h2>
+    <div class="two"><div><label class="f" for="L">Length (mm)</label><input type="number" id="L" inputmode="numeric" min="10" max="300" value="${STK.L}"></div>
+    <div><label class="f" for="W">Width (mm)</label><input type="number" id="W" inputmode="numeric" min="10" max="300" value="${STK.W}"></div></div>
+    ${chips('size', ['25x25', '50x50', '75x75', '100x100', '90x50', '100x150'], v => v.replace('x', ' × ') + ' mm')}
+    <p class="hint">10 to 300 mm each side.</p><div class="err" id="eSize"></div></div>
+  <div class="card"><h2>Quantity</h2>
+    <input type="number" id="q" inputmode="numeric" min="1" max="10000" value="${STK.q}" aria-label="Total quantity">
+    ${chips('q', [50, 100, 250, 500, 1000, 2000])}
+    <p class="hint">Total across all designs. Up to 10,000.</p><div class="err" id="eQ"></div></div>
+  <div class="card"><h2>Sticker</h2>
+    <div class="two"><div><label class="f" for="shape">Shape</label><select id="shape">${d.shapes.map(s => `<option ${s === STK.shape ? 'selected' : ''}>${s}</option>`).join('')}</select></div>
+    <div><label class="f" for="material">Finish</label><select id="material">${d.materials.map(s => `<option ${s === STK.material ? 'selected' : ''}>${s}</option>`).join('')}</select></div></div>
+    <label class="f" for="designs" style="margin-top:10px">Number of designs</label><input type="number" id="designs" inputmode="numeric" min="1" max="25" value="${STK.designs}">
+    <div class="err" id="eD"></div></div>
+  <div class="card"><h2>Turnaround</h2>${radios('speed', d.speed, STK.speed, speedTxt)}</div>
+  <div class="card"><h2>Preview before printing</h2>${radios('proof', d.proof, STK.proof)}</div>`;
+}
+
+function renderNamecards() {
+  const d = D[cur];
+  if (NC.mi === null) NC.mi = d.M_popular.length ? d.M_popular[0] : 0;
+  if (NC.si === null) NC.si = Math.max(0, d.S.findIndex(s => /Back/.test(s)));
+  $('f').innerHTML = `
+  <div class="card"><h2>Card</h2>
+    <label class="f" for="size">Size</label><select id="size">${d.sizes.map((s, i) => `<option value="${i}" ${i === NC.size ? 'selected' : ''}>${s}</option>`).join('')}</select>
+    <label class="f" for="mi" style="margin-top:10px">Paper</label><select id="mi">${d.M_label.map((s, i) => `<option value="${i}" ${i === NC.mi ? 'selected' : ''}>${s}${d.M_popular.includes(i) ? ' (most popular)' : ''}</option>`).join('')}</select>
+    <label class="f" for="si" style="margin-top:10px">Printing</label><select id="si">${d.S.map((s, i) => `<option value="${i}" ${i === NC.si ? 'selected' : ''}>${s}</option>`).join('')}</select>
+    <label class="opt" style="margin-top:10px"><input type="checkbox" id="corners" ${NC.corners ? 'checked' : ''}>4 rounded corners<span class="r">+S$${d.corners_add}</span></label></div>
+  <div class="card"><h2>Quantity</h2>
+    <input type="number" id="q" inputmode="numeric" min="1" max="20000" value="${NC.q}" aria-label="Total quantity">
+    ${chips('q', [100, 200, 300, 500, 1000, 2000])}
+    <p class="hint">Total cards across all designs. Up to 20,000.</p><div class="err" id="eQ"></div>
+    <label class="f" for="designs" style="margin-top:10px">Number of designs</label><input type="number" id="designs" inputmode="numeric" min="1" max="25" value="${NC.designs}">
+    <p class="hint">Front + back of one card = 1 design.</p><div class="err" id="eD"></div></div>
+  <div class="card"><h2>Turnaround</h2>${radios('speed', d.speed, NC.speed, speedTxt)}</div>
+  <div class="card"><h2>Preview before printing</h2>${radios('proof', d.proof, NC.proof)}</div>`;
+}
+
+function readForm() {
+  const n = id => { const e = $(id); return e ? Math.floor(Number(e.value)) : null; };
+  const r = name => (document.querySelector(`input[name=${name}]:checked`) || {}).value;
+  if (cur === 'waterproof-stickers') Object.assign(STK, {L: n('L'), W: n('W'), q: n('q'), designs: n('designs'), shape: $('shape').value, material: $('material').value, speed: r('speed'), proof: r('proof')});
+  else Object.assign(NC, {size: n('size'), mi: n('mi'), si: n('si'), corners: $('corners').checked, q: n('q'), designs: n('designs'), speed: r('speed'), proof: r('proof')});
+}
+
+function quote() {
+  const d = D[cur]; const errs = {};
+  let base = null, s, spec, fields, desc;
+  if (cur === 'waterproof-stickers') {
+    s = STK;
+    if (!(s.L >= 10 && s.L <= 300 && s.W >= 10 && s.W <= 300)) errs.eSize = 'Enter 10 to 300 mm for both sides.';
+    if (!(s.q >= 1 && s.q <= 10000)) errs.eQ = 'Enter 1 to 10,000. Need more? WhatsApp us.';
+    if (!(s.designs >= 1 && s.designs <= 25)) errs.eD = 'Enter 1 to 25. More designs? WhatsApp us.';
+    if (!Object.keys(errs).length) {
+      const L = tier(s.L, d.L), W = tier(s.W, d.W), Q = tier(s.q, d.Q);
+      base = d.P[(d.L.indexOf(L) * d.W.length + d.W.indexOf(W)) * d.Q.length + d.Q.indexOf(Q)];
+    }
+    desc = `${s.L} × ${s.W} mm, ${s.shape}, ${s.material}, ${s.q} pcs, ${s.designs} design${s.designs > 1 ? 's' : ''}`;
+    fields = {[d.ops_fields.L]: s.L, [d.ops_fields.W]: s.W, [d.ops_fields.q]: s.q, [d.ops_fields.designs]: s.designs,
+              [d.ops_fields.shape]: '~' + s.shape, [d.ops_fields.material]: '~' + s.material};
+  } else {
+    s = NC;
+    if (!(s.q >= 1 && s.q <= 20000)) errs.eQ = 'Enter 1 to 20,000. Need more? WhatsApp us.';
+    if (!(s.designs >= 1 && s.designs <= 25)) errs.eD = 'Enter 1 to 25. More designs? WhatsApp us.';
+    if (!Object.keys(errs).length) base = d.P[(s.mi * d.S.length + s.si) * d.Q.length + d.Q.indexOf(tier(s.q, d.Q))] + (s.corners ? d.corners_add : 0);
+    desc = `${d.sizes[s.size]}, ${d.M_label[s.mi]}, ${d.S[s.si]}${s.corners ? ', rounded corners' : ''}, ${s.q} cards, ${s.designs} design${s.designs > 1 ? 's' : ''}`;
+    fields = {[d.ops_fields.size]: '~' + d.sizes[s.size], [d.ops_fields.material]: '~' + d.M_label[s.mi], [d.ops_fields.sides]: '~' + d.S[s.si],
+              [d.ops_fields.corners]: '~' + (s.corners ? '4 Rounded' : 'No Rounded'), [d.ops_fields.q]: s.q, [d.ops_fields.designs]: s.designs};
+  }
+  ['eSize', 'eQ', 'eD'].forEach(k => { if ($(k)) $(k).textContent = errs[k] || ''; });
+  const sp = d.speed.find(x => x.id === s.speed), pr = d.proof.find(x => x.id === s.proof);
+  fields[d.ops_fields.speed] = '~' + sp.label; fields[d.ops_fields.proof] = '~' + ({none: 'No', digital: 'Digital', physical: 'Physical'})[s.proof];
+  const dz = base === null ? null : designsAdd(s.designs, d.designs);
+  const total = base === null || dz === null ? null : base + dz + sp.add + pr.add;
+  const ok = (STATUS[cur] || {ok: true}).ok;
+  $('stale').hidden = ok;
+  $('stale').innerHTML = ok ? '' : `We're re-checking this product's prices right now. Please see the live price on our <a href="${d.url}" target="_blank" rel="noopener">webstore</a> or WhatsApp us.`;
+  $('total').textContent = total === null || !ok ? 'S$–' : 'S$' + total;
+  $('what').textContent = total === null || !ok ? '' : 'total, nett';
+  $('lead').innerHTML = `Ready in <b>${sp.days.toLowerCase()}</b>${pr.days ? ' <b>+ 1 working day</b> for the proof' : ''} <i>(printing time; choose delivery or self-collection at checkout)</i>`;
+  const u = new URL(d.url);
+  u.searchParams.set('tpq', JSON.stringify(fields));
+  u.searchParams.set('utm_source', 'quickprice'); u.searchParams.set('utm_medium', 'referral'); u.searchParams.set('utm_campaign', 'quickprice_pilot');
+  $('order').href = u.toString();
+  const msg = `Hi ThunderPrintSG! Quick Price for ${d.name}: ${desc}, ${sp.label} (${sp.days})${s.proof !== 'none' ? ', ' + pr.label : ''}${total !== null && ok ? ' = S$' + total : ''}.`;
+  $('wa').href = `https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
+  const bad = total === null || !ok;
+  $('order').setAttribute('aria-disabled', bad && ok ? 'true' : 'false');
+}
+
+function render() {
+  document.querySelectorAll('.tab').forEach(t => t.setAttribute('aria-selected', t.dataset.p === cur));
+  (cur === 'waterproof-stickers' ? renderStickers : renderNamecards)();
+  const st = STATUS[cur] || {};
+  $('foot').innerHTML = `Prices from ${D[cur].name} on <a href="${D[cur].url}" target="_blank" rel="noopener">thunderprint.sg</a>. Prices last checked against the webstore: ${st.checked ? new Date(st.checked).toLocaleString('en-SG', {dateStyle: 'medium', timeStyle: 'short'}) : 'pending'}.<br>Artwork upload and payment happen on the webstore.`;
+  quote();
+}
+
+document.addEventListener('input', () => { readForm(); quote(); });
+document.addEventListener('change', () => { readForm(); quote(); });
+document.addEventListener('click', e => {
+  const c = e.target.closest('[data-chip]'); if (c) {
+    if (c.dataset.chip === 'size') { const [l, w] = c.dataset.v.split('x'); $('L').value = l; $('W').value = w; }
+    else $('q').value = c.dataset.v;
+    readForm(); quote(); return;
+  }
+  const t = e.target.closest('.tab'); if (t && t.dataset.p !== cur) { load(t.dataset.p); }
+});
+
+async function load(p) {
+  cur = p;
+  if (!D[p]) D[p] = await fetch(`data/${p}.json`).then(r => r.json());
+  history.replaceState(null, '', '#' + p);
+  render();
+}
+(async () => {
+  try { STATUS = await fetch('data/status.json', {cache: 'no-store'}).then(r => r.json()); } catch (e) { STATUS = {}; }
+  const h = location.hash.slice(1);
+  load(['waterproof-stickers', 'standard-namecards'].includes(h) ? h : 'waterproof-stickers');
+})();
+</script>
+</body>
+</html>
