@@ -128,7 +128,7 @@ function renderNamecards() {
   $('f').innerHTML = `
   <div class="card"><h2>Card</h2>
     <label class="f" for="size">Size</label><select id="size">${d.sizes.map((s, i) => `<option value="${i}" ${i === NC.size ? 'selected' : ''}>${s}</option>`).join('')}</select>
-    <label class="f" for="mi" style="margin-top:10px">Paper</label><select id="mi">${d.M_label.map((s, i) => `<option value="${i}" ${i === NC.mi ? 'selected' : ''}>${s}${d.M_popular.includes(i) ? ' (most popular)' : ''}</option>`).join('')}</select>
+    <label class="f" for="mi" style="margin-top:10px">Paper</label><select id="mi">${d.M_label.map((s, i) => `<option value="${i}" ${i === NC.mi ? 'selected' : ''}>${s}${d.M_popular.includes(i) ? ' · Popular' : ''}</option>`).join('')}</select>
     <label class="f" for="si" style="margin-top:10px">Printing</label><select id="si">${d.S.map((s, i) => `<option value="${i}" ${i === NC.si ? 'selected' : ''}>${s}</option>`).join('')}</select>
     <label class="opt" style="margin-top:10px"><input type="checkbox" id="corners" ${NC.corners ? 'checked' : ''}>4 rounded corners<span class="r">+S$${d.corners_add}</span></label></div>
   <div class="card"><h2>Quantity</h2>
