@@ -1,57 +1,14 @@
 {
  "waterproof-stickers": {
   "ok": true,
-  "checked": "2026-11-21T07:43+08:00",
+  "checked": "2026-11-22T06:50+08:00",
   "samples": 22,
   "mismatches": []
  },
  "standard-namecards": {
-  "ok": false,
-  "checked": "2026-11-21T07:43+08:00",
+  "ok": true,
+  "checked": "2026-11-22T06:50+08:00",
   "samples": 21,
-  "mismatches": [
-   {
-    "spec": {
-     "mi": 0,
-     "si": 1,
-     "q": 226,
-     "corners": false,
-     "speed": "std",
-     "proof": "digital",
-     "size": 1,
-     "designs": 1
-    },
-    "page": 14,
-    "live": null
-   },
-   {
-    "spec": {
-     "mi": 0,
-     "si": 0,
-     "q": 3657,
-     "corners": true,
-     "speed": "super",
-     "proof": "none",
-     "size": 0,
-     "designs": 9
-    },
-    "page": 196,
-    "live": null
-   },
-   {
-    "spec": {
-     "mi": 2,
-     "si": 1,
-     "q": 15632,
-     "corners": false,
-     "speed": "std",
-     "proof": "none",
-     "size": 1,
-     "designs": 25
-    },
-    "page": 285,
-    "live": null
-   }
-  ]
+  "mismatches": []
  }
 }
